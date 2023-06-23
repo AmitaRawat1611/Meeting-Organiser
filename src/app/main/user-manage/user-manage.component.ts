@@ -5,9 +5,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
-export interface PeriodicElement {
+export interface UserData {
   username: string;
-  position: number;
+  id: number;
   age: number;
   gender: string;
   email: string;
@@ -16,19 +16,19 @@ export interface PeriodicElement {
 }
 
 /** Constants used to fill up our data base. */
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: UserData[] = [
   {
-    position: 1,
-    username: 'sonia',
-    name: 'Sonia',
+    id: 1,
+    username: 'K1vya',
+    name: 'kavya',
     age: 21,
     gender: 'f',
-    email: 'sonia@gmail.com',
+    email: 'kavya@gmail.com',
 
     role: 'user',
   },
   {
-    position: 2,
+    id: 2,
     username: 'amita',
     name: 'Amita',
 
@@ -39,7 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     role: 'user',
   },
   {
-    position: 3,
+    id: 3,
     username: 'sonia',
     name: 'Sonia',
 
@@ -50,9 +50,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
     role: 'user',
   },
   {
-    position: 4,
-    username: 'a',
-    name: 'Sonia',
+    id: 4,
+    username: 'Tushar',
+    name: 'tushar',
 
     age: 21,
     gender: 'm',
@@ -60,7 +60,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     role: 'user',
   },
   {
-    position: 5,
+    id: 5,
     username: 's',
     name: 'Sonia',
 
@@ -70,7 +70,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     role: 'user',
   },
   {
-    position: 6,
+    id: 6,
     username: 'abc',
     name: 'Sonia',
 
@@ -81,13 +81,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
     role: 'user',
   },
   {
-    position: 7,
-    username: 'sonia',
-    name: 'Sonia',
+    id: 7,
+    username: 'AmanV',
+    name: 'Aman',
 
     age: 21,
     gender: 'f',
-    email: 'sonia@gmail.com',
+    email: 'aman@gmail.com',
 
     role: 'user',
   },
@@ -99,7 +99,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class UserManageComponent {
   displayedColumns: string[] = [
-    'position',
+    'id',
     'username',
     'name',
     'age',
@@ -121,9 +121,9 @@ export class UserManageComponent {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
   ngAfterViewInit() {
-    this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+    this.dataSource = new MatTableDataSource<UserData>(ELEMENT_DATA);
     this.dataSource.paginator = this.paginator;
   }
 }
