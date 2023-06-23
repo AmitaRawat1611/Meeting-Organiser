@@ -1,0 +1,87 @@
+<!-- Status -->
+<mat-card class="welcome__card">
+  <h1 class="welcome__card--text">Welcome back, Amita</h1>
+  <img
+    src="../../../assets/images/welcome-img.PNG"
+    class="welcome__card--img"
+  />
+  <p class="welcome__card--text-small">
+    Check your meeting status, <br />meeting schedules and members
+  </p>
+</mat-card>
+
+<mat-card class="main__card">
+  <h1 class="primary-heading">Members Status</h1>
+  <div class="cards">
+    <mat-card class="card secondary-light">
+      <mat-card-content>
+        <h2 class="card__heading">Total Users</h2>
+        <h1 class="card__number secondary-blue">15</h1>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card primary-light">
+      <mat-card-content>
+        <h2 class="card__heading">Active Members</h2>
+        <h1 class="card__number primary-main">10</h1>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card tertiary-light">
+      <mat-card-content>
+        <h2 class="card__heading">Inactive Members</h2>
+        <h1 class="card__number tertiary-main">5</h1>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Meeting details -->
+  <div class="meeting-container">
+    <div class="calendar">
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <!-- <p>Selected date: {{ selected }}</p> -->
+    </div>
+
+    <div>
+      <h1 class="primary-heading" style="margin-top: 2rem">Meeting Status</h1>
+      <div class="cards">
+        <div>
+          <mat-card class="card meeting-card border-left-secondary margin-b--m">
+            <mat-card-content>
+              <h2 class="card__heading meeting-card--heading">
+                Total Meetings
+              </h2>
+              <h1 class="card__number secondary-blue">10</h1>
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="card meeting-card border-left-primary">
+            <mat-card-content>
+              <h2 class="card__heading meeting-card--heading">
+                Scheduled Meetings
+              </h2>
+              <h1 class="card__number primary-main">8</h1>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div>
+          <mat-card class="card meeting-card border-left-tertiary margin-b--m">
+            <mat-card-content>
+              <h2 class="card__heading meeting-card--heading">
+                Completed Meetings
+              </h2>
+              <h1 class="card__number tertiary-main">5</h1>
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="card meeting-card border-left-pink">
+            <mat-card-content>
+              <h2 class="card__heading meeting-card--heading">
+                Rescheduled Meetings
+              </h2>
+              <h1 class="card__number pink-main">2</h1>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

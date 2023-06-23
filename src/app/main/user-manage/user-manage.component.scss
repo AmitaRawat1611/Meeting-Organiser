@@ -1,0 +1,29 @@
+.filter {
+  width: 80%;
+  margin: 2rem;
+}
+table {
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+}
+
+td,
+th {
+  width: auto;
+}
+.container {
+  display: flex;
+  align-items: center;
+
+  &__card {
+    padding: 1rem;
+  }
+}
+
+.paginator {
+  // border: 1px solid #111;
+}

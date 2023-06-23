@@ -1,0 +1,79 @@
+<form class="create-user--form">
+  <h1 class="create-user--form__heading">Create/Update User Form</h1>
+  <div class="container">
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Name</mat-label>
+      <input matInput />
+    </mat-form-field>
+
+    <!-- phone number -->
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Phone number</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+
+  <div class="container">
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Age</mat-label>
+      <input matInput />
+    </mat-form-field>
+
+    <!-- phone number -->
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Gender</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+
+  <div class="container">
+    <!-- email -->
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Email</mat-label>
+      <input matInput />
+    </mat-form-field>
+
+    <!-- Role -->
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="one">Adminn</mat-option>
+        <mat-option value="two">User</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="container">
+    <!-- username -->
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Username</mat-label>
+      <input matInput />
+    </mat-form-field>
+
+    <!-- password -->
+    <mat-form-field class="create-user--form__input">
+      <mat-label>Password</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+
+  <div class="create-user--form__btn-box">
+    <button
+      class="create-user--form__btn"
+      mat-raised-button
+      color="primary"
+      mat-dialog-close
+    >
+      Save
+    </button>
+
+    <button
+      class="create-user--form__btn"
+      mat-raised-button
+      color="warn"
+      mat-dialog-close
+    >
+      Close
+    </button>
+  </div>
+</form>

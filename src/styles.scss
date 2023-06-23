@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  // background-color: #131532;
+  overflow-y: hidden;
+}
+.mat-typography {
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  padding-inline-start: 0px;
+}

@@ -1,0 +1,80 @@
+<div class="login__section">
+  <div class="login__background">
+    <img
+      src="../../assets/images/bg-form-removebg.png"
+      alt=""
+      class="login__img"
+    />
+  </div>
+  <mat-card class="form__card">
+    <div class="form__container">
+      <!-- <h1 class="login__main-heading">Welcome to Meeting Organizer</h1> -->
+      <!-- <app-login-hero></app-login-hero> -->
+      <form class="form" [formGroup]="form">
+        <!-- <h1 class="login__heading-1">
+          Login & <br />
+          Schedule Meeting
+        </h1> -->
+        <h1 class="login__heading">
+          <mat-icon class="login__icon">exit_to_app</mat-icon>Sign In
+        </h1>
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Select Role</mat-label>
+          <mat-select>
+            <mat-option value="one">Admin</mat-option>
+            <mat-option value="two">User</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Username</mat-label>
+
+          <input
+            matInput
+            placeholder="Username"
+            value=""
+            formControlName="username"
+          />
+          <mat-error *ngIf="username && username.invalid && username.touched"
+            >Enter username
+          </mat-error>
+        </mat-form-field>
+
+        <div class="example-container">
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+              [type]="hide ? 'password' : 'text'"
+              formControlName="password"
+            />
+            <mat-error *ngIf="password && password.invalid && password.touched"
+              >Enter password
+            </mat-error>
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <button
+            class="example-full-width login__btn"
+            mat-raised-button
+            color="primary"
+            [routerLink]="['/main']"
+            (click)="onSubmit()"
+            [disabled]="form.invalid"
+          >
+            Login
+          </button>
+          <a class="form__text">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>
+<!-- [routerLink]="['/main']" -->
